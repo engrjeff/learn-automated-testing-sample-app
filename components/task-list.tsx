@@ -18,12 +18,13 @@ export function TaskList() {
     <Tabs defaultValue="pending">
       <TabsList className="grid w-full grid-cols-2 mb-6">
         <TabsTrigger value="pending">
-          <CircleDashedIcon className="size-4 mr-2" /> Pending (
-          {pendingTasks.length})
+          <CircleDashedIcon className="size-4 mr-2" /> Pending
+          <span data-testid="pending-count">({pendingTasks.length})</span>
         </TabsTrigger>
         <TabsTrigger value="finished">
           <CircleCheckIcon className="size-4 mr-2" />
-          Finished ({finishedTasks.length})
+          Finished{' '}
+          <span data-testid="finished-count">({finishedTasks.length})</span>
         </TabsTrigger>
       </TabsList>
       <TabsContent value="pending">

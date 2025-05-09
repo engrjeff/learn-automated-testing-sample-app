@@ -15,14 +15,14 @@ export function TaskItem({ task }: { task: Task }) {
     <Card className="hover:border-primary group">
       <CardHeader className="flex-row space-y-0 gap-3 items-center">
         {task.completed ? (
-          <CircleCheckIcon className="size-4 text-primary" />
+          <CircleCheckIcon className="size-4 text-primary shrink-0" />
         ) : (
           <input
             type="checkbox"
             id={task.id}
             name={task.id}
             data-testid={task.id + '-checkbox'}
-            className="size-4 accent-primary hover:accent-primary"
+            className="size-4 accent-primary hover:accent-primary shrink-0"
             checked={task.completed || isCompleted}
             onChange={(e) => {
               setIsCompleted(e.currentTarget.checked);

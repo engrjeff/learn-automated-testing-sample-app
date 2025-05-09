@@ -41,7 +41,7 @@ export function TaskForm() {
         <label
           htmlFor="task-title"
           className="sr-only"
-          data-testid="task-label"
+          data-testid="task-input-label"
         >
           Task Title
         </label>
