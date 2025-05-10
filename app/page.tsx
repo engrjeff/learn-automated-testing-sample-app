@@ -10,9 +10,14 @@ export default function Home() {
       <p className="mb-6" data-testid="hero-subtitle">
         This is a sample app for learning automated web app testing.
       </p>
-      <Button asChild size="lg" data-testid="login-link">
-        <Link href="/login">Log In</Link>
-      </Button>
+      <div className="flex items-center gap-4">
+        <Button asChild size="lg" data-testid="login-link">
+          <Link href="/login">Log In</Link>
+        </Button>
+        <Button variant="secondary" asChild size="lg" data-testid="apidoc-link">
+          <Link href="/api/ui">API Doc</Link>
+        </Button>
+      </div>
     </div>
   );
 }

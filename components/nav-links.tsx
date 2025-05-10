@@ -27,9 +27,14 @@ export function NavLinks() {
       >
         <Link href="/contact">Contact</Link>
       </Button>
-      <Button asChild data-testid="nav-contact-login">
-        <Link href="/login">Log In</Link>
-      </Button>
+      <div className="ml-auto space-x-3">
+        <Button asChild data-testid="nav-login-link">
+          <Link href="/login">Log In</Link>
+        </Button>
+        <Button variant="secondary" asChild data-testid="nav-apidoc-link">
+          <Link href="/api/ui">API Doc</Link>
+        </Button>
+      </div>
     </nav>
   );
 }

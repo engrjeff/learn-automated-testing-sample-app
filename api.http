@@ -18,14 +18,14 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/api/tasks/11
+GET http://localhost:3000/api/tasks/sam
 
 ###
 PATCH http://localhost:3000/api/tasks/1
 Content-Type: application/json
 
 {
-    "title" : "Updated Task"
+    "completed" : false
 }
 
 ###
@@ -33,8 +33,8 @@ PATCH http://localhost:3000/api/tasks/3
 Content-Type: application/json
 
 {
-    "completed" : true
+    "completed" : false
 }
 
 ###
-DELETE http://localhost:3000/api/tasks/2
+DELETE http://localhost:3000/api/tasks/20
