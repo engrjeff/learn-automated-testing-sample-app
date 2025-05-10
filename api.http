@@ -1,0 +1,40 @@
+GET http://localhost:3000/api/hello
+
+###
+
+GET http://localhost:3000/api/tasks
+
+###
+
+GET http://localhost:3000/api/tasks?completed=sss
+
+###
+
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title" : "ssss"
+}
+
+###
+GET http://localhost:3000/api/tasks/11
+
+###
+PATCH http://localhost:3000/api/tasks/1
+Content-Type: application/json
+
+{
+    "title" : "Updated Task"
+}
+
+###
+PATCH http://localhost:3000/api/tasks/3
+Content-Type: application/json
+
+{
+    "completed" : true
+}
+
+###
+DELETE http://localhost:3000/api/tasks/2
