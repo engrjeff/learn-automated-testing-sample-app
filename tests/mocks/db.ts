@@ -8,4 +8,10 @@ export const db = factory({
     name: faker.commerce.product,
     price: () => faker.number.int({ min: 10, max: 100 }),
   },
+  task: {
+    id: primaryKey(faker.number.int),
+    title: faker.lorem.text,
+    completed: () => faker.helpers.arrayElement([true, false]),
+    createdAt: () => faker.date.past().toISOString(),
+  },
 });

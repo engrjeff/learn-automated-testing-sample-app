@@ -1,11 +1,6 @@
-import { http, HttpResponse } from 'msw';
+import { db } from './db';
 
 export const handlers = [
-  http.get('/tasks', () => {
-    return HttpResponse.json([
-      { id: 1, title: 'Learn testing', completed: true },
-      { id: 2, title: 'Learn React', completed: false },
-      { id: 3, title: 'Learn Cypress', completed: false },
-    ]);
-  }),
+  ...db.task.toHandlers('rest', 'http://localhost:3000/api'),
+  ...db.product.toHandlers('rest'),
 ];
