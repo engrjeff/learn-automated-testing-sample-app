@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+
 import { setupServer } from 'msw/node';
 import { handlers } from './handlers';
 
