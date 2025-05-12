@@ -14,6 +14,7 @@ const tasksQuerySchema = z
         example: 'true',
       }),
   })
+  .strict({ message: 'Invalid query params supplied.' })
   .openapi('TasksQuery');
 
 const taskSchema = z
