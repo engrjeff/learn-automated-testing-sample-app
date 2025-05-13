@@ -1,4 +1,4 @@
-import { UserTasks } from '@/components/user-tasks';
+import { UserTasksMSW } from '@/components/user-tasks-msw';
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ function PlaygroundPage() {
     <div>
       <h1 className="text-lg font-bold">Playground</h1>
       <div>
-        <UserTasks />
+        <UserTasksMSW />
       </div>
     </div>
   );

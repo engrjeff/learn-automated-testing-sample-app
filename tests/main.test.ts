@@ -8,8 +8,6 @@ describe('main', () => {
 
     const data = db.product.getAll();
 
-    console.log(data);
-
     expect(data.length).toBe(3);
   });
 });

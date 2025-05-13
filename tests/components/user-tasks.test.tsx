@@ -5,8 +5,8 @@ import { render, screen } from '@testing-library/react';
 import * as api from '@/lib/api';
 
 describe('UserTasks', () => {
-  afterEach(() => {
-    vi.restoreAllMocks();
+  beforeEach(() => {
+    vi.clearAllMocks();
   });
 
   it('should render the list of user tasks', async () => {

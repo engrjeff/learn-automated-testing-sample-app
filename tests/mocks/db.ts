@@ -9,7 +9,7 @@ export const db = factory({
     price: () => faker.number.int({ min: 10, max: 100 }),
   },
   task: {
-    id: primaryKey(faker.number.int),
+    id: primaryKey(faker.string.uuid),
     title: faker.lorem.text,
     completed: () => faker.helpers.arrayElement([true, false]),
     createdAt: () => faker.date.past().toISOString(),
