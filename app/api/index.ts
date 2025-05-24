@@ -3,6 +3,7 @@ import { swaggerUI } from '@hono/swagger-ui';
 import { OpenAPIHono } from '@hono/zod-openapi';
 import { errorHandlerMiddleware } from './error-handler';
 
+import products from './products';
 import tasks from './tasks';
 import users from './users';
 
@@ -12,6 +13,7 @@ app.onError(errorHandlerMiddleware);
 
 app.route('/tasks', tasks);
 app.route('/users', users);
+app.route('/products', products);
 
 // The OpenAPI documentation will be available at /doc
 app.doc('/doc', {

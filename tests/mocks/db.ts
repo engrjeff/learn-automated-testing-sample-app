@@ -7,6 +7,7 @@ export const db = factory({
     id: primaryKey(faker.number.int),
     name: faker.commerce.product,
     price: () => faker.number.int({ min: 10, max: 100 }),
+    color: faker.color.human,
   },
   task: {
     id: primaryKey(faker.string.uuid),

@@ -266,26 +266,8 @@ const deleteTaskRoute = createRoute({
   tags: ['Task'],
   request: {
     params: idParamsSchema,
-    body: {
-      content: {
-        'application/json': {
-          schema: updateTaskSchema,
-        },
-      },
-    },
   },
   responses: {
-    400: {
-      content: {
-        'application/json': {
-          schema: z.object({
-            name: z.literal('BadRequestError'),
-            message: z.literal('Invalid value for completed.'),
-          }),
-        },
-      },
-      description: 'Bad request',
-    },
     404: {
       content: {
         'application/json': {

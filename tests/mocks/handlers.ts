@@ -5,6 +5,13 @@ export const handlers = [
   http.get('/tasks', () => {
     return HttpResponse.json(db.task.getAll());
   }),
-  // ...db.task.toHandlers('rest', 'http://localhost:3001/api/'),
-  ...db.product.toHandlers('rest'),
+  http.get('/products', () => {
+    return HttpResponse.json(db.product.getAll());
+  }),
+  http.post('/products', async ({ request }) => {
+    const body = await request.json();
+    // @ts-expect-error nah
+    const product = db.product.create(body);
+    return HttpResponse.json(product, { status: 201 });
+  }),
 ];
